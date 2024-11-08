@@ -19,8 +19,8 @@ export default function Home() {
 
     if (editId !== null) {
       // Update existing item
-      setTodos((prevTodos) =>
-        prevTodos.map((item) =>
+      setTodos((prevTodo) =>
+        prevTodo.map((item) =>
           item.id === editId ? { ...item, movie: movieName } : item
         )
       );
@@ -59,7 +59,7 @@ export default function Home() {
       <div className="mt-8 flex justify-center">
         <input
           type="text"
-          value={movieName}
+         value={movieName}
           onChange={(e) => setMovieName(e.target.value)}
           placeholder="Enter Movie Name"
           className="w-96 h-12 p-3 border-4 rounded-md border-double border-gray-500 focus:outline-none hover:bg-gray-200 transition-colors duration-200"
